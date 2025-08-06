@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/linzenggeng/Desktop/detection/build",
+  "command": "/usr/bin/clang++ -DIE_THREAD=IE_THREAD_TBB -DOV_THREAD=OV_THREAD_TBB -DTBB_PREVIEW_WAITING_FOR_WORKERS=1 -I/Users/linzenggeng/Desktop/detection/include -I/Users/linzenggeng/Desktop/detection/TimeCounter -I/Users/linzenggeng/Desktop/detection/TrackerHeader -I/Users/linzenggeng/Desktop/detection/Eigen -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include -isystem /opt/homebrew/Cellar/opencv/4.12.0/include/opencv4 -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include/ie -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -Wno-error=deprecated-declarations -o CMakeFiles/detection.dir/main.cpp.o -c /Users/linzenggeng/Desktop/detection/main.cpp",
+  "file": "/Users/linzenggeng/Desktop/detection/main.cpp",
+  "output": "CMakeFiles/detection.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/linzenggeng/Desktop/detection/build",
+  "command": "/usr/bin/clang++ -DIE_THREAD=IE_THREAD_TBB -DOV_THREAD=OV_THREAD_TBB -DTBB_PREVIEW_WAITING_FOR_WORKERS=1 -I/Users/linzenggeng/Desktop/detection/include -I/Users/linzenggeng/Desktop/detection/TimeCounter -I/Users/linzenggeng/Desktop/detection/TrackerHeader -I/Users/linzenggeng/Desktop/detection/Eigen -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include -isystem /opt/homebrew/Cellar/opencv/4.12.0/include/opencv4 -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include/ie -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -Wno-error=deprecated-declarations -o CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o -c /Users/linzenggeng/Desktop/detection/TrackerSource/BYTETracker.cpp",
+  "file": "/Users/linzenggeng/Desktop/detection/TrackerSource/BYTETracker.cpp",
+  "output": "CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o"
+},
+{
+  "directory": "/Users/linzenggeng/Desktop/detection/build",
+  "command": "/usr/bin/clang++ -DIE_THREAD=IE_THREAD_TBB -DOV_THREAD=OV_THREAD_TBB -DTBB_PREVIEW_WAITING_FOR_WORKERS=1 -I/Users/linzenggeng/Desktop/detection/include -I/Users/linzenggeng/Desktop/detection/TimeCounter -I/Users/linzenggeng/Desktop/detection/TrackerHeader -I/Users/linzenggeng/Desktop/detection/Eigen -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include -isystem /opt/homebrew/Cellar/opencv/4.12.0/include/opencv4 -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include/ie -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -Wno-error=deprecated-declarations -o CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o -c /Users/linzenggeng/Desktop/detection/TrackerSource/STrack.cpp",
+  "file": "/Users/linzenggeng/Desktop/detection/TrackerSource/STrack.cpp",
+  "output": "CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o"
+},
+{
+  "directory": "/Users/linzenggeng/Desktop/detection/build",
+  "command": "/usr/bin/clang++ -DIE_THREAD=IE_THREAD_TBB -DOV_THREAD=OV_THREAD_TBB -DTBB_PREVIEW_WAITING_FOR_WORKERS=1 -I/Users/linzenggeng/Desktop/detection/include -I/Users/linzenggeng/Desktop/detection/TimeCounter -I/Users/linzenggeng/Desktop/detection/TrackerHeader -I/Users/linzenggeng/Desktop/detection/Eigen -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include -isystem /opt/homebrew/Cellar/opencv/4.12.0/include/opencv4 -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include/ie -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -Wno-error=deprecated-declarations -o CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o -c /Users/linzenggeng/Desktop/detection/TrackerSource/kalmanFilter.cpp",
+  "file": "/Users/linzenggeng/Desktop/detection/TrackerSource/kalmanFilter.cpp",
+  "output": "CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o"
+},
+{
+  "directory": "/Users/linzenggeng/Desktop/detection/build",
+  "command": "/usr/bin/clang++ -DIE_THREAD=IE_THREAD_TBB -DOV_THREAD=OV_THREAD_TBB -DTBB_PREVIEW_WAITING_FOR_WORKERS=1 -I/Users/linzenggeng/Desktop/detection/include -I/Users/linzenggeng/Desktop/detection/TimeCounter -I/Users/linzenggeng/Desktop/detection/TrackerHeader -I/Users/linzenggeng/Desktop/detection/Eigen -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include -isystem /opt/homebrew/Cellar/opencv/4.12.0/include/opencv4 -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include/ie -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -Wno-error=deprecated-declarations -o CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o -c /Users/linzenggeng/Desktop/detection/TrackerSource/lapjv.cpp",
+  "file": "/Users/linzenggeng/Desktop/detection/TrackerSource/lapjv.cpp",
+  "output": "CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o"
+},
+{
+  "directory": "/Users/linzenggeng/Desktop/detection/build",
+  "command": "/usr/bin/clang++ -DIE_THREAD=IE_THREAD_TBB -DOV_THREAD=OV_THREAD_TBB -DTBB_PREVIEW_WAITING_FOR_WORKERS=1 -I/Users/linzenggeng/Desktop/detection/include -I/Users/linzenggeng/Desktop/detection/TimeCounter -I/Users/linzenggeng/Desktop/detection/TrackerHeader -I/Users/linzenggeng/Desktop/detection/Eigen -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include -isystem /opt/homebrew/Cellar/opencv/4.12.0/include/opencv4 -isystem /Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include/ie -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -Wno-error=deprecated-declarations -o CMakeFiles/detection.dir/TrackerSource/utils.cpp.o -c /Users/linzenggeng/Desktop/detection/TrackerSource/utils.cpp",
+  "file": "/Users/linzenggeng/Desktop/detection/TrackerSource/utils.cpp",
+  "output": "CMakeFiles/detection.dir/TrackerSource/utils.cpp.o"
+}
+]

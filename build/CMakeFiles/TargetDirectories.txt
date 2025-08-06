@@ -1,0 +1,3 @@
+/Users/linzenggeng/Desktop/detection/build/CMakeFiles/detection.dir
+/Users/linzenggeng/Desktop/detection/build/CMakeFiles/edit_cache.dir
+/Users/linzenggeng/Desktop/detection/build/CMakeFiles/rebuild_cache.dir
