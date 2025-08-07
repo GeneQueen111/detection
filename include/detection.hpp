@@ -103,7 +103,7 @@ void DetectionArmor::run()
         cap >> frame;
 
         resize(frame, img, Size(640, 640));
-
+        
         // 推理
         infer();
 
@@ -115,6 +115,13 @@ void DetectionArmor::run()
         }
 
         showImage();
+
+        if (cv::waitKey(1) == 27)
+        {
+            isRunning = false; // 设置线程停止标志
+            clearHeap();
+            break;
+        } // 按下ESC键退出
 
         // cout << "Detected armors: " << getdata().size() << endl;
 
@@ -134,8 +141,8 @@ void DetectionArmor::run()
 
 void DetectionArmor::infer()
 {
-    // 计时器
-    Timer timer(counter);
+
+    Timer t(counter);
 
     // 归一化
     input_blob = blobFromImage(
@@ -251,17 +258,10 @@ void __TEST__ DetectionArmor::showImage()
             drawObject(img, i); // 绘制检测结果
         }
         cv::imshow("Detection Armor", img); // 显示图像
-        format_print_data_test();
+        // format_print_data_test();
     }
 
     // std::lock_guard<std::mutex> lock(_mtx);
-
-    if (cv::waitKey(20) == 27)
-    {
-        isRunning = false; // 设置线程停止标志
-        clearHeap();
-        exit(0);
-    } // 按下ESC键退出
 }
 
 void __TEST__ DetectionArmor::format_print_data_test()

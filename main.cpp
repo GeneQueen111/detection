@@ -16,7 +16,6 @@ int main(int, char**)
     detection::DetectionArmor detectionArmor(model_path, true);
 
     detectionArmor.start_detection();
-    detectionArmor.showImage();
 
     return 0;
 }
