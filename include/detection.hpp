@@ -75,17 +75,16 @@ void DetectionArmor::clearHeap()
 void DetectionArmor::drawObject(Mat& image, const ArmorData& d)
 {
     // 绘制装甲板的边界框
-    float s_x = d.center_x - d.length / 2.0;
-    float s_y = d.center_y - d.width / 2.0;
-    float e_x = d.center_x + d.length / 2.0; 
-    float e_y = d.center_y + d.width / 2.0;
-    cv::rectangle(
-        image, 
-        Point(s_x, s_y), 
-        Point(e_x, e_y), 
-        Scalar(0, 0, 255),
-        3
-    );
+    std::vector<Point> points = {d.p1, d.p2, d.p3, d.p4};
+    polylines(image, points, true, Scalar(0, 0, 255), 2);
+
+    // cv::rectangle(
+    //     image, 
+    //     Point(s_x, s_y), 
+    //     Point(e_x, e_y), 
+    //     Scalar(0, 0, 255),
+    //     3
+    // );
 }
 
 inline double DetectionArmor::sigmoid(double x) 
@@ -163,11 +162,14 @@ void DetectionArmor::infer()
     float nms_threshold = 0.45;   // NMS重叠阈值
     
     // 存储临时结果
-    std::vector<cv::Rect> boxes;
+    std::vector<Rect> boxes;
     std::vector<int> num_class;
     std::vector<int> color_class;
     std::vector<float> confidences;     
     std::vector<int> indices;
+
+    // 临时的四点
+    std::vector<vector<Point>> fourPointModel;
 
     // 遍历所有的网络输出
     for (int i = 0; i < output_buffer.rows; ++i) 
@@ -196,6 +198,23 @@ void DetectionArmor::infer()
         
         // 获取第一个输出向量的指针
         float* f_ptr = output_buffer.ptr<float>(i);
+
+        vector<Point> box_point(4);
+
+        box_point[0].x = f_ptr[0];
+        box_point[0].y = f_ptr[1];
+
+        box_point[1].x = f_ptr[2];
+        box_point[1].y = f_ptr[3];
+
+        box_point[2].x = f_ptr[4];
+        box_point[2].y = f_ptr[5];
+
+        box_point[3].x = f_ptr[6];
+        box_point[3].y = f_ptr[7];
+
+        fourPointModel.push_back(box_point);
+
         // 创建rect
         cv::Rect rect(
             f_ptr[0], // x
@@ -218,23 +237,71 @@ void DetectionArmor::infer()
         indices               // 输出索引（必须传入引用）
     );
 
-    // cout << "NMS indices size: " << indices.size() << endl;
-
     // 保留最终的数据
     std::vector<ArmorData> data;
     for (int valid_index = 0; valid_index < indices.size(); ++valid_index) 
     {
         ArmorData d;
-        d.center_x = boxes[indices[valid_index]].x + boxes[indices[valid_index]].width / 2.0;
-        d.center_y = boxes[indices[valid_index]].y + boxes[indices[valid_index]].height / 2.0;
-        d.length = boxes[indices[valid_index]].width;
-        d.width = boxes[indices[valid_index]].height;
+
+        d.p1 = fourPointModel[valid_index][0];
+        d.p2 = fourPointModel[valid_index][1];
+        d.p3 = fourPointModel[valid_index][2];
+        d.p4 = fourPointModel[valid_index][3];
+
+        d.center_point.x = (d.p1.x + d.p2.x + d.p3.x + d.p4.x) / 4;
+        d.center_point.y = (d.p1.y + d.p2.y + d.p3.y + d.p4.y) / 4;
+        // d.length = boxes[indices[valid_index]].width;
+        // d.width = boxes[indices[valid_index]].height;
         d.ID = num_class[indices[valid_index]];
-        d.color = color_class[indices[valid_index]];
+
+        int color = color_class[indices[valid_index]];
+        if (color == 0){ d.color = Color::RED; }
+        else if (color == 1){ d.color = Color::BLUE; }
+        else { d.color = Color::NONE; }
 
         armorsDatas.push_back(d);
     }
+
+    tracks_objects = tracker.update(detection_objects);
+    detection_objects.clear();
 }
+
+void DetectionArmor::drawTracks(Mat& image)
+{
+    // 绘制跟踪轨迹
+    for (const auto& track : tracks_objects) {
+        if (track.is_activated) {  // 绘制已激活的轨迹
+            auto tlwh = track.tlwh;
+            Scalar color = tracker.get_color(track.track_id); // 获取跟踪ID对应的颜色
+            
+            // 绘制跟踪框
+            Point tl = Point(tlwh[0], tlwh[1]); // 左上角   1
+            Point br = Point(tlwh[0] + tlwh[2], tlwh[1] + tlwh[3]); // 右下角  3
+
+
+            //这是测试同时取跟踪四个点的效果(不太理想)
+            //Point tr = Point(tlwh[0] + tlwh[2], tlwh[1]); // 右上角  2
+            //Point bl = Point(tlwh[0], tlwh[1] + tlwh[3]); // 左下角  4
+            
+            //std::vector<Point> points = {tl, tr, br, bl}; // 1 2 3 4
+
+            //cv::polylines(image, points, true, cv::Scalar(0, 255, 0), 2);
+
+
+
+
+            //rectangle(image, tl, br, color, 2);
+            rectangle(image, tl, br,Scalar(0, 255, 0), 2);
+            
+            // 绘制跟踪ID
+            // putText(image, 
+            //     "Track " + to_string(track.track_id), 
+            //     Point(tlwh[0], tlwh[1] - 5), 
+            //     FONT_HERSHEY_SIMPLEX, 0.6, color, 2);
+        }
+    }
+}
+
 
 inline const vector<ArmorData> DetectionArmor::getdata()
 {
@@ -269,8 +336,8 @@ void __TEST__ DetectionArmor::format_print_data_test()
     cout << "armor Num: " << getdata().size() << endl;
     for (auto d : getdata())
     {
-        cout << "center X: " << d.center_x << " ";
-        cout << "center Y: " << d.center_y << endl;
+        // cout << "center X: " << d.center_x << " ";
+        // cout << "center Y: " << d.center_y << endl;
     }
 }
 

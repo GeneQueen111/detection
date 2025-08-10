@@ -19,16 +19,22 @@ using namespace cv::dnn;
 
 namespace detection
 {
+
+    enum class Color {RED, BLUE, NONE};
+
     typedef struct ArmorData
     {
-        float center_x; //中心点x
-        float center_y; //中心点y
+        cv::Point center_point;
+        // float length;   //长度
+        // float width;    //宽度
 
-        float length;   //长度
-        float width;    //宽度
+        cv::Point p1;
+        cv::Point p2;
+        cv::Point p3;
+        cv::Point p4;
 
         int ID = 0;
-        int color = 0;
+        Color color;
 
     } ArmorData;
 
@@ -51,10 +57,13 @@ namespace detection
     bool ifCountTime = false; // 是否计时
 
     // 指定识别的颜色
-    int detect_color = 0; // 0: 红色，1: 蓝色
+    int detect_color = 1; // 0: 红色，1: 蓝色
 
     // 当前帧的装甲板数据
     vector<ArmorData> armorsDatas; //
+
+    std::vector<Object> detection_objects; // 要在容器里面存检测对象
+    std::vector<STrack> tracks_objects;
 
     // 整个推理的线程
     thread infer_thread;
@@ -72,7 +81,7 @@ namespace detection
         
         DetectionArmor() = default; //默认构造函数
         DetectionArmor(const DetectionArmor&) = delete; // 禁止拷贝
-        DetectionArmor(string& model_path, bool ifCountTime=false, string video_path="/Users/linzenggeng/Desktop/detection/video/2.mp4");
+        DetectionArmor(string& model_path, bool ifCountTime=false, string video_path="/Users/linzenggeng/Desktop/detection/video/3.mp4");
         ~DetectionArmor();
 
         BYTETracker tracker = BYTETracker(10, 10); // 初始化BYTETracker
@@ -89,6 +98,8 @@ namespace detection
 
         // 开启识别
         void run();
+
+        void drawTracks(Mat& image);
 
         // 显示图像
         void __TEST__ showImage();
