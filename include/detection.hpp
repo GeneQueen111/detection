@@ -77,6 +77,13 @@ void DetectionArmor::drawObject(Mat& image, const ArmorData& d)
     // 绘制装甲板的边界框
     std::vector<Point> points = {d.p1, d.p2, d.p3, d.p4};
     polylines(image, points, true, Scalar(0, 0, 255), 2);
+    cv::circle(image, d.p1, 5, Scalar(0, 255, 0), -1);
+    cv::circle(image, d.p2, 5, Scalar(0, 255, 0), -1);
+    cv::circle(image, d.p3, 5, Scalar(0, 255, 0), -1);
+    cv::circle(image, d.p4, 5, Scalar(0, 255, 0), -1);
+    // 绘制装甲板的中心点
+    cv::circle(image, d.center_point, 5, Scalar(255, 0, 0), -1);
+
 
     // cv::rectangle(
     //     image, 
@@ -115,7 +122,7 @@ void DetectionArmor::run()
 
         showImage();
 
-        if (cv::waitKey(1) == 27)
+        if (cv::waitKey(60) == 27)
         {
             isRunning = false; // 设置线程停止标志
             clearHeap();
@@ -260,6 +267,21 @@ void DetectionArmor::infer()
         else { d.color = Color::NONE; }
 
         armorsDatas.push_back(d);
+
+        // 创建对象用于跟踪器
+        Object dog;
+        dog.rect = cv::Rect_<float>(
+            boxes[indices[valid_index]].x,
+            boxes[indices[valid_index]].y,
+
+            boxes[indices[valid_index]].width,
+            boxes[indices[valid_index]].height
+        );
+        dog.label = num_class[indices[valid_index]];  //从类别里面取
+        dog.prob = confidences[indices[valid_index]];
+        detection_objects.push_back(dog);
+
+        
     }
 
     tracks_objects = tracker.update(detection_objects);
@@ -288,10 +310,12 @@ void DetectionArmor::drawTracks(Mat& image)
             //cv::polylines(image, points, true, cv::Scalar(0, 255, 0), 2);
 
 
+            Point center = Point(tlwh[0] + tlwh[2] / 2, tlwh[1] + tlwh[3] / 2);
 
+            circle(image, center, 5, Scalar(0,255,0), -1);
 
             //rectangle(image, tl, br, color, 2);
-            rectangle(image, tl, br,Scalar(0, 255, 0), 2);
+            //rectangle(image, tl, br,Scalar(0, 255, 0), 2);
             
             // 绘制跟踪ID
             // putText(image, 
@@ -324,6 +348,8 @@ void __TEST__ DetectionArmor::showImage()
         {
             drawObject(img, i); // 绘制检测结果
         }
+        drawTracks(img); // 绘制跟踪轨迹
+
         cv::imshow("Detection Armor", img); // 显示图像
         // format_print_data_test();
     }

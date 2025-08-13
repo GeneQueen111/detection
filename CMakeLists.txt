@@ -6,10 +6,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set(OpenCV_DIR "/Users/Opencv/opencv_build")
 find_package(OpenCV REQUIRED)
 
-include_directories("/Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/include")
-set(OpenVINO_DIR "/Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/cmake")
+include_directories("/home/ubuntu/l_openvino_toolkit_ubuntu22_2024.6.0.17404.4c0f47d2335_x86_64/runtime/include")
+set(OpenVINO_DIR "/home/ubuntu/l_openvino_toolkit_ubuntu22_2024.6.0.17404.4c0f47d2335_x86_64/runtime/cmake")
 find_package(OpenVINO REQUIRED)
-link_directories("/Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f3_arm64/runtime/lib/arm64/Release") 
+link_directories("/home/ubuntu/l_openvino_toolkit_ubuntu22_2024.6.0.17404.4c0f47d2335_x86_64/runtime/lib/intel64") 
 
 
 # find_package(OpenCV REQUIRED COMPONENTS core dnn)
@@ -18,16 +18,17 @@ link_directories("/Users/m_openvino_toolkit_macos_11_0_2023.3.0.13775.ceeafaf64f
 
 find_package(OpenVINO REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 include_directories(
     ${OpenCV_INCLUDE_DIRS} 
     ${OpenVINO_INCLUDE_DIRS}
 )
 
-include_directories(/Users/linzenggeng/Desktop/detection/include)
-include_directories(/Users/linzenggeng/Desktop/detection/TimeCounter)
-include_directories(/Users/linzenggeng/Desktop/detection/TrackerHeader)
-include_directories(/Users/linzenggeng/Desktop/detection/Eigen)
+include_directories(./include)
+include_directories(./TimeCounter)
+include_directories(./TrackerHeader)
+include_directories(./Eigen)
 
 file(GLOB_RECURSE SOURCES "TrackerSource/*.cpp")
 add_executable(${PROJECT_NAME} main.cpp ${SOURCES})

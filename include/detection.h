@@ -81,7 +81,7 @@ namespace detection
         
         DetectionArmor() = default; //默认构造函数
         DetectionArmor(const DetectionArmor&) = delete; // 禁止拷贝
-        DetectionArmor(string& model_path, bool ifCountTime=false, string video_path="/Users/linzenggeng/Desktop/detection/video/3.mp4");
+        DetectionArmor(string& model_path, bool ifCountTime, string video_path);
         ~DetectionArmor();
 
         BYTETracker tracker = BYTETracker(10, 10); // 初始化BYTETracker
