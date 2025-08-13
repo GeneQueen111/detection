@@ -2,7 +2,7 @@
 #define __DETECTION_HPP__
 
 #include "detection.h"
-// #include "STrack.h"
+#include "STrack.h"
 #include <thread>    // std::this_thread
 #include <chrono>    // std::chrono::seconds
 #include <system_error>

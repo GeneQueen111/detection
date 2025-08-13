@@ -26,8 +26,8 @@ namespace byte_kalman
 		}
 		_update_mat = Eigen::MatrixXf::Identity(4, 8);
 
-		this->_std_weight_position = 1. / 20;
-		this->_std_weight_velocity = 1. / 160;
+		this->_std_weight_position = 1. / 50;  // 减小位置噪声权重，提高对观测值的信任度
+		this->_std_weight_velocity = 1. / 100; // 增大速度噪声权重，使速度估计更敏感
 	}
 
 	KAL_DATA KalmanFilter::initiate(const DETECTBOX &measurement)
@@ -47,10 +47,10 @@ namespace byte_kalman
 		std(1) = 2 * _std_weight_position * measurement[3];
 		std(2) = 1e-2;
 		std(3) = 2 * _std_weight_position * measurement[3];
-		std(4) = 10 * _std_weight_velocity * measurement[3];
-		std(5) = 10 * _std_weight_velocity * measurement[3];
+		std(4) = 5 * _std_weight_velocity * measurement[3];   // 减小初始速度方差
+		std(5) = 5 * _std_weight_velocity * measurement[3];   // 减小初始速度方差
 		std(6) = 1e-5;
-		std(7) = 10 * _std_weight_velocity * measurement[3];
+		std(7) = 5 * _std_weight_velocity * measurement[3];   // 减小初始速度方差
 
 		KAL_MEAN tmp = std.array().square();
 		KAL_COVA var = tmp.asDiagonal();
@@ -61,10 +61,10 @@ namespace byte_kalman
 	{
 		//revise the data;
 		DETECTBOX std_pos;
-		std_pos << _std_weight_position * mean(3),
-			_std_weight_position * mean(3),
+		std_pos << _std_weight_position * mean(3) * 0.8,  // 减小位置预测噪声
+			_std_weight_position * mean(3) * 0.8,          // 减小位置预测噪声
 			1e-2,
-			_std_weight_position * mean(3);
+			_std_weight_position * mean(3) * 0.8;          // 减小位置预测噪声
 		DETECTBOX std_vel;
 		std_vel << _std_weight_velocity * mean(3),
 			_std_weight_velocity * mean(3),
@@ -86,8 +86,8 @@ namespace byte_kalman
 	KAL_HDATA KalmanFilter::project(const KAL_MEAN &mean, const KAL_COVA &covariance)
 	{
 		DETECTBOX std;
-		std << _std_weight_position * mean(3), _std_weight_position * mean(3),
-			1e-1, _std_weight_position * mean(3);
+		std << _std_weight_position * mean(3) * 0.6, _std_weight_position * mean(3) * 0.6,  // 减小观测噪声
+			1e-1, _std_weight_position * mean(3) * 0.6;                                        // 减小观测噪声
 		KAL_HMEAN mean1 = _update_mat * mean.transpose();
 		KAL_HCOVA covariance1 = _update_mat * covariance * (_update_mat.transpose());
 		Eigen::Matrix<float, 4, 4> diag = std.asDiagonal();

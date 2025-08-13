@@ -1,5 +1,5 @@
 CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o: \
- /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/lapjv.cpp \
+ /home/ubuntu/桌面/test/detection/TrackerSource/lapjv.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -57,4 +57,4 @@ CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h /usr/include/string.h \
  /usr/include/strings.h \
- /home/ubuntu/桌面/RM26_Detect_Ling/detection/./TrackerHeader/lapjv.h
+ /home/ubuntu/桌面/test/detection/./TrackerHeader/lapjv.h

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/桌面/RM26_Detect_Ling/detection
+CMAKE_SOURCE_DIR = /home/ubuntu/桌面/test/detection
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/桌面/RM26_Detect_Ling/detection/build
+CMAKE_BINARY_DIR = /home/ubuntu/桌面/test/detection/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/detection.dir/depend.make
@@ -72,86 +72,86 @@ include CMakeFiles/detection.dir/flags.make
 CMakeFiles/detection.dir/main.cpp.o: CMakeFiles/detection.dir/flags.make
 CMakeFiles/detection.dir/main.cpp.o: ../main.cpp
 CMakeFiles/detection.dir/main.cpp.o: CMakeFiles/detection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/detection.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/main.cpp.o -MF CMakeFiles/detection.dir/main.cpp.o.d -o CMakeFiles/detection.dir/main.cpp.o -c /home/ubuntu/桌面/RM26_Detect_Ling/detection/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/test/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/detection.dir/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/main.cpp.o -MF CMakeFiles/detection.dir/main.cpp.o.d -o CMakeFiles/detection.dir/main.cpp.o -c /home/ubuntu/桌面/test/detection/main.cpp
 
 CMakeFiles/detection.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detection.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/RM26_Detect_Ling/detection/main.cpp > CMakeFiles/detection.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/test/detection/main.cpp > CMakeFiles/detection.dir/main.cpp.i
 
 CMakeFiles/detection.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detection.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/RM26_Detect_Ling/detection/main.cpp -o CMakeFiles/detection.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/test/detection/main.cpp -o CMakeFiles/detection.dir/main.cpp.s
 
 CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o: CMakeFiles/detection.dir/flags.make
 CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o: ../TrackerSource/BYTETracker.cpp
 CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o: CMakeFiles/detection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o -c /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/BYTETracker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/test/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.o -c /home/ubuntu/桌面/test/detection/TrackerSource/BYTETracker.cpp
 
 CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/BYTETracker.cpp > CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/test/detection/TrackerSource/BYTETracker.cpp > CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.i
 
 CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/BYTETracker.cpp -o CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/test/detection/TrackerSource/BYTETracker.cpp -o CMakeFiles/detection.dir/TrackerSource/BYTETracker.cpp.s
 
 CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o: CMakeFiles/detection.dir/flags.make
 CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o: ../TrackerSource/STrack.cpp
 CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o: CMakeFiles/detection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o -c /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/STrack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/test/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/STrack.cpp.o -c /home/ubuntu/桌面/test/detection/TrackerSource/STrack.cpp
 
 CMakeFiles/detection.dir/TrackerSource/STrack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detection.dir/TrackerSource/STrack.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/STrack.cpp > CMakeFiles/detection.dir/TrackerSource/STrack.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/test/detection/TrackerSource/STrack.cpp > CMakeFiles/detection.dir/TrackerSource/STrack.cpp.i
 
 CMakeFiles/detection.dir/TrackerSource/STrack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detection.dir/TrackerSource/STrack.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/STrack.cpp -o CMakeFiles/detection.dir/TrackerSource/STrack.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/test/detection/TrackerSource/STrack.cpp -o CMakeFiles/detection.dir/TrackerSource/STrack.cpp.s
 
 CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o: CMakeFiles/detection.dir/flags.make
 CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o: ../TrackerSource/kalmanFilter.cpp
 CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o: CMakeFiles/detection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o -c /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/kalmanFilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/test/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.o -c /home/ubuntu/桌面/test/detection/TrackerSource/kalmanFilter.cpp
 
 CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/kalmanFilter.cpp > CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/test/detection/TrackerSource/kalmanFilter.cpp > CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.i
 
 CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/kalmanFilter.cpp -o CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/test/detection/TrackerSource/kalmanFilter.cpp -o CMakeFiles/detection.dir/TrackerSource/kalmanFilter.cpp.s
 
 CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o: CMakeFiles/detection.dir/flags.make
 CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o: ../TrackerSource/lapjv.cpp
 CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o: CMakeFiles/detection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o -c /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/lapjv.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/test/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.o -c /home/ubuntu/桌面/test/detection/TrackerSource/lapjv.cpp
 
 CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/lapjv.cpp > CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/test/detection/TrackerSource/lapjv.cpp > CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.i
 
 CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/lapjv.cpp -o CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/test/detection/TrackerSource/lapjv.cpp -o CMakeFiles/detection.dir/TrackerSource/lapjv.cpp.s
 
 CMakeFiles/detection.dir/TrackerSource/utils.cpp.o: CMakeFiles/detection.dir/flags.make
 CMakeFiles/detection.dir/TrackerSource/utils.cpp.o: ../TrackerSource/utils.cpp
 CMakeFiles/detection.dir/TrackerSource/utils.cpp.o: CMakeFiles/detection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/detection.dir/TrackerSource/utils.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/utils.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/utils.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/utils.cpp.o -c /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/桌面/test/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/detection.dir/TrackerSource/utils.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detection.dir/TrackerSource/utils.cpp.o -MF CMakeFiles/detection.dir/TrackerSource/utils.cpp.o.d -o CMakeFiles/detection.dir/TrackerSource/utils.cpp.o -c /home/ubuntu/桌面/test/detection/TrackerSource/utils.cpp
 
 CMakeFiles/detection.dir/TrackerSource/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detection.dir/TrackerSource/utils.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/utils.cpp > CMakeFiles/detection.dir/TrackerSource/utils.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/桌面/test/detection/TrackerSource/utils.cpp > CMakeFiles/detection.dir/TrackerSource/utils.cpp.i
 
 CMakeFiles/detection.dir/TrackerSource/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detection.dir/TrackerSource/utils.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/RM26_Detect_Ling/detection/TrackerSource/utils.cpp -o CMakeFiles/detection.dir/TrackerSource/utils.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/桌面/test/detection/TrackerSource/utils.cpp -o CMakeFiles/detection.dir/TrackerSource/utils.cpp.s
 
 # Object files for target detection
 detection_OBJECTS = \
@@ -228,7 +228,7 @@ detection: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.5.4d
 detection: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 detection: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
 detection: CMakeFiles/detection.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable detection"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/桌面/test/detection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable detection"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/detection.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -240,6 +240,6 @@ CMakeFiles/detection.dir/clean:
 .PHONY : CMakeFiles/detection.dir/clean
 
 CMakeFiles/detection.dir/depend:
-	cd /home/ubuntu/桌面/RM26_Detect_Ling/detection/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/桌面/RM26_Detect_Ling/detection /home/ubuntu/桌面/RM26_Detect_Ling/detection /home/ubuntu/桌面/RM26_Detect_Ling/detection/build /home/ubuntu/桌面/RM26_Detect_Ling/detection/build /home/ubuntu/桌面/RM26_Detect_Ling/detection/build/CMakeFiles/detection.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/桌面/test/detection/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/桌面/test/detection /home/ubuntu/桌面/test/detection /home/ubuntu/桌面/test/detection/build /home/ubuntu/桌面/test/detection/build /home/ubuntu/桌面/test/detection/build/CMakeFiles/detection.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/detection.dir/depend
 
